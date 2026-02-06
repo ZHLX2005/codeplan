@@ -1,0 +1,23 @@
+[project]
+name = "anthropic-proxy"
+version = "1.0.0"
+description = "OpenAI to Anthropic API proxy server"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "fastapi>=0.104.0",
+    "uvicorn>=0.24.0",
+    "pydantic>=2.5.0",
+    "python-dotenv>=1.0.0",
+    "anthropic>=0.40.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["."]
+
+[tool.uv]
+dev-dependencies = []
